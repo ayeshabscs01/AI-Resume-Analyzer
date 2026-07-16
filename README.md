@@ -117,6 +117,26 @@ AI-Resume-Analyzer/
 └── README.md
 ```
 
+## Deployment
+
+### Frontend (Vercel)
+1. Push your code to GitHub
+2. Go to [Vercel](https://vercel.com)
+3. Import your repository
+4. Vercel will automatically detect the `vercel.json` and deploy your frontend!
+
+### Backend (Render)
+1. Push your code to GitHub
+2. Go to [Render](https://render.com)
+3. Create a new Web Service
+4. Connect your repository
+5. Set the build command to: `pip install -r backend/requirements.txt`
+6. Set the start command to: `uvicorn backend.main:app --host 0.0.0.0 --port $PORT`
+6. Add your `OPENAI_API_KEY` (optional) in environment variables
+7. Deploy!
+
+**Important**: After deploying backend, update `frontend/src/services/api.js` to use your deployed backend URL!
+
 ## License
 
 MIT
