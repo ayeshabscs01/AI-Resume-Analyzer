@@ -5,7 +5,7 @@ import re
 from openai import OpenAI
 from typing import Optional, Dict, Any, List
 
-from backend.schemas import (
+from schemas import (
     AnalysisResult,
     ContactInfo,
     EducationItem,
@@ -16,7 +16,7 @@ from backend.schemas import (
     ExperienceRewrite,
     DetailedEvaluations
 )
-from backend.nlp import extract_contact_info, extract_skills_locally, TECH_SKILLS_DB
+from nlp import extract_contact_info, extract_skills_locally, TECH_SKILLS_DB
 
 logger = logging.getLogger(__name__)
 

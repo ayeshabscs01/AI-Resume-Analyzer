@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 # Load env files
 load_dotenv()
 
-from backend.parser import extract_text
-from backend.openai_service import analyze_resume_ai
-from backend.nlp import get_nlp
-from backend.schemas import AnalysisResult
+from parser import extract_text
+from openai_service import analyze_resume_ai
+from nlp import get_nlp
+from schemas import AnalysisResult
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO)
