@@ -2,6 +2,8 @@
   "version": 2,
   "rootDirectory": "frontend",
   "framework": "vite",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
