@@ -5,7 +5,7 @@ import axios from 'axios'
  */
 export async function analyzeResume(file, jobRole = '') {
   // Read custom configurations from localStorage if set by the user
-  const endpoint = localStorage.getItem('resu_api_endpoint') || ''
+  const endpoint = localStorage.getItem('resu_api_endpoint') || 'https://ai-resume-analyzer-929h.onrender.com'
   const customApiKey = localStorage.getItem('resu_openai_key') || ''
   
   // Build target URL
@@ -34,7 +34,7 @@ export async function analyzeResume(file, jobRole = '') {
  * Checks backend API health.
  */
 export async function checkApiHealth() {
-  const endpoint = localStorage.getItem('resu_api_endpoint') || ''
+  const endpoint = localStorage.getItem('resu_api_endpoint') || 'https://ai-resume-analyzer-929h.onrender.com'
   const baseUrl = endpoint.replace(/\/$/, '')
   const url = `${baseUrl}/api/health`
 
